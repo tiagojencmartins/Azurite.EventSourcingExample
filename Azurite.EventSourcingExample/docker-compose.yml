@@ -1,0 +1,9 @@
+﻿version: "3"
+services:
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite
+    hostname: azurite
+    restart: always
+    command: azurite --tableHost 0.0.0.0 --tablePort 9999
+    ports:
+     - 9999:9999
